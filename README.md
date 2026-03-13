@@ -40,19 +40,20 @@ _Development Tools_
 
 **STRUCTURE**
 
+```
 SURVEYCALC API/
-|
-|--- config/ # Database configuration
-|--- controllers/ # Application logic (handle requests,computation and responses)
-|--- middlewares/ # Custom middleware (authentication, authorization, etc.)
-|--- models/ # Database schemas and models
-|--- routes/ # API endpoint definitions
-|
-|---.gitignore
-|--- app.js # Main application entry point
-|--- package.json
-|--- package-lock.json
---- README.md
+    config/             # Database configuration
+    controllers/        # Application logic (handle requests,computation and responses)
+    middlewares/        # Custom middleware (authentication, authorization, etc.)
+    models/             # Database schemas and models
+    routes/             # API endpoint definitions
+
+    .gitignore
+    app.js              # Main application entry point
+    package.json
+    package-lock.json
+    README.md
+```
 
 ## HOW IT WORKS
 
@@ -66,15 +67,16 @@ This project is a RESTful backend API built with Express.js that calculates the 
 
 **API Endpoint / Routes**
 
-_ADMIN_  
-GET /admin/users # displays the complete list of users  
-GET /admin/projects # provides access to all users projects
-GET admin/project?search=projectName # retrieves a specific project by ID
-DELETE admin/users/:id # delete a user by id
+_ADMIN_
+
+- GET /admin/users (displays the complete list of users)
+- GET /admin/projects (provides access to all users projects)
+- GET admin/project?search=projectName (retrieves a specific project by ID)
+- DELETE admin/users/:id (delete a user by id)
 
 _GENERAL_
 
-POST /auth/register # registers new user
+- POST /auth/register # registers new user
 
 ```
     _sample request_
@@ -93,7 +95,7 @@ POST /auth/register # registers new user
     }
 ```
 
-POST /auth/login # users login incl admin
+- POST /auth/login # users login incl admin
 
 ```
     _sample request_
@@ -112,9 +114,10 @@ POST /auth/login # users login incl admin
 ```
 
 _USERS_
-GET /api/projects # retrieves all projects belonging to a user
-GET /api/project?search=projectname # retrieves a specific project
-POST /api/project # Calculates the area of a project from coordinates and saves it to the database
+
+- GET /api/projects # retrieves all projects belonging to a user
+- GET /api/project?search=projectname # retrieves a specific project
+- POST /api/project # Calculates the area of a project from coordinates and saves it to the database
 
 ```
     _sample request_
